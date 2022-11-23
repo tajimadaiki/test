@@ -2,7 +2,10 @@
 
 import sys
 
-ans = 0.0
+ans = 0
 for n in sys.stdin:
-  ans += float(n)
+  try:
+    ans += int(n)
+  except:
+    ans += float(n)
 print(ans)
