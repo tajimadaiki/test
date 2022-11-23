@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+#SPDX-FileCopyrightText: 2022 Daiki Tajima t.dai.1215@gmail.com
+#SPDX-License-Identifier: BSD-3-Clause
 
 import sys
 
