@@ -13,5 +13,14 @@ res=0
 out=$(seq 10 | ./plus)
 [ "${out}" = 55 ] || ng $LINENO
 
+### STRANGE INPUT ###
+out=$(echo A | ./plus)
+[ "$?" = 1 ]        || ng $LINENO
+[ "${out}" = "" ]   || ng $LINENO
+
+out=$(echo | ./plus)
+[ "$?" = 1 ]        || ng $LINENO
+[ "${out}" = "" ]   || ng $LINENO
+
 [ "$res" = 0 ] && echo OK
 exit $res
